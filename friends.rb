@@ -31,3 +31,8 @@ def count_money(array)
   end
   return total_money
 end
+
+def money_lend(lender, lendee, amount)
+  lender[:monies] -= amount
+  lendee[:monies] += amount
+end
