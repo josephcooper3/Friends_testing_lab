@@ -113,7 +113,8 @@ class TestFriends < MiniTest::Test
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
   def test_if_money_was_lent
     result = money_lend(@person5, @person2, 10)
-    
+    assert_equal(90, @person5[:monies])
+    assert_equal(12, @person2[:monies])
   end
 
   # 8. Find the set of everyone's favourite food joined together
