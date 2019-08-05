@@ -36,3 +36,13 @@ def money_lend(lender, lendee, amount)
   lender[:monies] -= amount
   lendee[:monies] += amount
 end
+
+def concatenate_favourite_snacks(array)
+  snacks_array = []
+  for person in array
+    for snack in person[:favourites][:snacks]
+      snacks_array << snack
+    end
+  end
+  return snacks_array
+end
