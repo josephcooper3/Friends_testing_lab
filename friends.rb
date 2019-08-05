@@ -46,3 +46,13 @@ def concatenate_favourite_snacks(array)
   end
   return snacks_array
 end
+
+def find_people_with_no_friends(array)
+  no_friends_array = []
+  for person in array
+    if person[:friends] == []
+      no_friends_array << person[:name]
+    end
+  end
+  return no_friends_array
+end
